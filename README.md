@@ -65,3 +65,5 @@ Interpretation: The data visualization shows the anticipated sizes of astronomic
 
 ### 7. Distribution of Estimated Diameter (Max) by Hazardous Status
 Interpretation: This graph displays the estimated maximum diameters distribution of celestial objects classified as either dangerous or non-hazardous. The information skews towards smaller objects, with the tiniest category, mostly made up of non-dangerous items, having the highest frequency at nearly two million. Although the x-axis goes up to 80 km, objects over 20 km are very rare and can only be detected at extremely low frequencies. In general, non-dangerous items are much more common, while dangerous items are slightly more common in larger size categories compared to the previous "min diameter" data.
+
+Further details will be appended to Deliverable 2 and Deliverable 3.
