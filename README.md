@@ -82,9 +82,8 @@ The categorical column orbiting_body was converted into numeric codes. This tran
 ### 1. PyCaret: 
 To ensure an accurate modeling process, the dataset was configured in PyCaret with capabilities to reduce multicollinearity and standardize features. Using standard metrics, PyCaret evaluated numerous classification models and selected the best performing one and precision-recall curves evaluated the best model discovered by PyCaret.
 
-### 2. Scikit-Learn Models: Three conventional machine learning models, including Random Forest, Decision Tree, and
- Logistic Regression, were built using Scikit-learn. Normalization of features was performed using StandardScaler to ensure equal access to feature information for
- all models.
+### 2. Scikit-Learn Models:
+Three conventional machine learning models, including Random Forest, Decision Tree, andLogistic Regression, were built using Scikit-learn. Normalization of features was performed using StandardScaler to ensure equal access to feature information for all models.
 ### Model Evaluation: 
 The Precision-recall curves were utilized for evaluating each model, with the Area Under the Curve(AUC) of the precision-recall curve (PR-AUC) serving as the performance metric. Choosing the correct measurement is essential when working with imbalanced data sets.
 
