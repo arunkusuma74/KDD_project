@@ -79,35 +79,35 @@ The categorical column orbiting_body was converted into numeric codes. This tran
 
 # Modeling:
 
-# 1. PyCaret: 
+### 1. PyCaret: 
 To ensure an accurate modeling process, the dataset was configured in PyCaret with capabilities to reduce multicollinearity and standardize features. Using standard metrics, PyCaret evaluated numerous classification models and selected the best performing one and precision-recall curves evaluated the best model discovered by PyCaret.
 
-# 2. Scikit-Learn Models: Three conventional machine learning models, including Random Forest, Decision Tree, and
+### 2. Scikit-Learn Models: Three conventional machine learning models, including Random Forest, Decision Tree, and
  Logistic Regression, were built using Scikit-learn. Normalization of features was performed using StandardScaler to ensure equal access to feature information for
  all models.
-# Model Evaluation: 
+### Model Evaluation: 
 The Precision-recall curves were utilized for evaluating each model, with the Area Under the Curve(AUC) of the precision-recall curve (PR-AUC) serving as the performance metric. Choosing the correct measurement is essential when working with imbalanced data sets.
 
 # Evaluation:
 
-# PyCaret:
+### PyCaret:
 The ExtraTreesClassifier was identified as the best model based on PyCaret's comparison, which was further validated using precision-recall curves.
 
-# Scikit-Learn Models: 
+### Scikit-Learn Models: 
 Among the scikit-learn models, Random Forest provided the highest PR-AUC score, indicating its superior performance in balancing precision and recall.
 
 # Conclusion:
 
-# Model Performance:
+### Model Performance:
 The use of PyCaret simplified the process of model selection and hyperparameter tuning, leading to the identification of the ExtraTreesClassifier as the best model for predicting hazardous NEOs.
 
-# Precision vs. Recall:
+### Precision vs. Recall:
 The use of precision-recall curves highlighted the importance of selecting a model that balances the detection of true positives (hazardous NEOs) while minimizing false positives.
 
 # Known Issues:
 
-# Data Imbalance: 
+### Data Imbalance: 
 The dataset had an imbalance between hazardous and non-hazardous NEOs. The use of PR-AUC helped mitigate this issue by focusing on both precision and recall.
 
-# Data Quality: 
+### Data Quality: 
 Some categorical features, like orbiting_body, were encoded numerically, which may lose some interpretative power.
