@@ -113,6 +113,6 @@ Some categorical features, like orbiting_body, were encoded numerically, which m
 
 ### Reporting Problems
 
-## Difficulties in Visualization: However, it was difficult to visualize complicated models and clarity required extra effort.
+**Difficulties in Visualization:**  It was difficult to visualize complicated models and clarity required extra effort.
 
-## Controversial Conclusions: Sometimes different models gave conflicting results, thus making it hard to establish consistent conclusions.
+**Controversial Conclusions:** Sometimes different models gave conflicting results, thus making it hard to establish consistent conclusions.
