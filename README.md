@@ -110,3 +110,9 @@ The dataset had an imbalance between hazardous and non-hazardous NEOs. The use o
 
 ### Data Quality: 
 Some categorical features, like orbiting_body, were encoded numerically, which may lose some interpretative power.
+
+### Reporting Problems
+
+## Difficulties in Visualization: However, it was difficult to visualize complicated models and clarity required extra effort.
+
+## Controversial Conclusions: Sometimes different models gave conflicting results, thus making it hard to establish consistent conclusions.
