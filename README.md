@@ -66,4 +66,48 @@ Interpretation: The data visualization shows the anticipated sizes of astronomic
 ### 7. Distribution of Estimated Diameter (Max) by Hazardous Status
 Interpretation: This graph displays the estimated maximum diameters distribution of celestial objects classified as either dangerous or non-hazardous. The information skews towards smaller objects, with the tiniest category, mostly made up of non-dangerous items, having the highest frequency at nearly two million. Although the x-axis goes up to 80 km, objects over 20 km are very rare and can only be detected at extremely low frequencies. In general, non-dangerous items are much more common, while dangerous items are slightly more common in larger size categories compared to the previous "min diameter" data.
 
-Further details will be appended to Deliverable 2 and Deliverable 3.
+# Data Preperation:
+
+### 1. Handling missing values:
+The dataset contained both numeric and categorical columns with missing values. Missing values in numeric columns were imputed with the median of each column, Missing values in categorical columns were imputed with the most frequent value (mode) of each column.
+
+### 2. Feature Engineering:
+A new feature, estimated_diameter_avg, was created by averaging the estimated_diameter_min and estimated_diameter_max columns. This feature represents a single value for the asteroid's diameter, simplifying the model's input space.
+
+### 3. Categorical Encoding: 
+The categorical column orbiting_body was converted into numeric codes. This transformation allows the model to process this categorical information numerically.
+
+# Modeling:
+
+# 1. PyCaret: 
+To ensure an accurate modeling process, the dataset was configured in PyCaret with capabilities to reduce multicollinearity and standardize features. Using standard metrics, PyCaret evaluated numerous classification models and selected the best performing one and precision-recall curves evaluated the best model discovered by PyCaret.
+
+# 2. Scikit-Learn Models: Three conventional machine learning models, including Random Forest, Decision Tree, and
+ Logistic Regression, were built using Scikit-learn. Normalization of features was performed using StandardScaler to ensure equal access to feature information for
+ all models.
+# Model Evaluation: 
+The Precision-recall curves were utilized for evaluating each model, with the Area Under the Curve(AUC) of the precision-recall curve (PR-AUC) serving as the performance metric. Choosing the correct measurement is essential when working with imbalanced data sets.
+
+# Evaluation:
+
+# PyCaret:
+The ExtraTreesClassifier was identified as the best model based on PyCaret's comparison, which was further validated using precision-recall curves.
+
+# Scikit-Learn Models: 
+Among the scikit-learn models, Random Forest provided the highest PR-AUC score, indicating its superior performance in balancing precision and recall.
+
+# Conclusion:
+
+# Model Performance:
+The use of PyCaret simplified the process of model selection and hyperparameter tuning, leading to the identification of the ExtraTreesClassifier as the best model for predicting hazardous NEOs.
+
+# Precision vs. Recall:
+The use of precision-recall curves highlighted the importance of selecting a model that balances the detection of true positives (hazardous NEOs) while minimizing false positives.
+
+# Known Issues:
+
+# Data Imbalance: 
+The dataset had an imbalance between hazardous and non-hazardous NEOs. The use of PR-AUC helped mitigate this issue by focusing on both precision and recall.
+
+# Data Quality: 
+Some categorical features, like orbiting_body, were encoded numerically, which may lose some interpretative power.
